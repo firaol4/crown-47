@@ -20,7 +20,7 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
-    this.title = "";
+    this.title = "Counter App";
     this.t = this.t || {};
     this.t = {
       ...this.t,
