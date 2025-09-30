@@ -27,8 +27,21 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
       title: "Title",
     };
     this.count = 0;
-    this.add = this.count++;
-    this.minus = this.count--;
+    increment() {
+      if (this.count < this.max) {
+        this.counter++;
+      }
+    };
+    
+    decrement() {
+      if (this.count > this.min) {
+        this.counter--;
+      }
+    };
+    
+    this.min = 0;
+    this.max = 50;
+    
 
     this.registerLocalization({
       context: this,
@@ -71,9 +84,11 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
+  <h3>${this.title}</h3>
   <h4>${this.count}</h4>
-  <button @click="${this.add}">+</button><button @click="${this.minus}">-</button>
+  <div class="buttons">
+ <button @click="${this.minus}">-</button> <button @click="${this.add}">+</button>
+  </div>
   
   <slot></slot>
 </div>`;
