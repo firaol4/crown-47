@@ -97,6 +97,7 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
         margin: 0.5em;
+        vertical-align: top; 
       }
       .wrapper {
         background: white;
