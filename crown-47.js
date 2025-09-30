@@ -96,6 +96,7 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-theme-primary);
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
+        margin: 0.5em;
       }
       .wrapper {
         background: white;
@@ -106,6 +107,8 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         max-width: 300px;
         width: 100%;
         color: navajowhite;
+        box-sizing: border-box; 
+        vertical-align: top;
       }
       h3 span {
         font-size: var(--crown-47-label-font-size, var(--ddd-font-size-s));
