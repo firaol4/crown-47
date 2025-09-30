@@ -110,6 +110,8 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         color: navajowhite;
         box-sizing: border-box; 
         vertical-align: top;
+        overflow: auto;
+        height: 300px;
       }
       h3 span {
         font-size: var(--crown-47-label-font-size, var(--ddd-font-size-s));
