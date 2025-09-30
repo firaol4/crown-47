@@ -31,6 +31,7 @@
         "@haxtheweb/d-d-d": "^11.0.5",
         "@haxtheweb/i18n-manager": "^11.0.0",
         "@haxtheweb/meme-maker": "^11.0.5",
+        "@haxtheweb/multiple-choice": "^11.0.5",
         "lit": "3.3.1"
     },
     "devDependencies": {
