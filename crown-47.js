@@ -74,15 +74,23 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         text-align: center;
         max-width: 300px;
         width: 100%;
+        color: navajowhite;
       }
       h3 span {
         font-size: var(--crown-47-label-font-size, var(--ddd-font-size-s));
       }
       .buttons {
-          display: flex;
-          justify-content: center;
-          gap: 1em;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
         }
+        button:hover {
+        background: #0055aa;
+      }
+      h4 {
+        font-size: 2em;
+        margin: 0.5em 0;
+      }
     `];
   }
 
