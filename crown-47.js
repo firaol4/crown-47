@@ -84,11 +84,11 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         justify-content: center;
         gap: 1em;
         }
-        button:hover {
+        button:hover, button:focus {
         background: #0055aa;
       }
       h4 {
-        font-size: 2em;
+        font-size: 4em;
         margin: 0.5em 0;
       }
     `];
