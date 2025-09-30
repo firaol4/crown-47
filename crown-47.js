@@ -111,6 +111,17 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         --glow-spread: 2px;
         text-shadow: 0 0 var(--glow-blur) var(--glow-color);
       }
+      .at-min {
+        color: red;
+        font-weight: bold;
+        text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+      }
+
+      .at-max {
+        color: yellow;
+        font-weight: bold;
+        text-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+      }
 
     `];
   }
@@ -120,7 +131,8 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 <div class="wrapper">
   <h3>${this.title}</h3>
-  <h4 class="number ${this.count === 18 ? 'eighteen' : this.count === 21 ? 'twentyone' : ''}">${this.count}</h4>
+  <h4 class="number ${this.count === 18 ? 'eighteen' : this.count === 21 ? 'twentyone' 
+  : this.count === this.min ? 'at-min' : this.count === this.max ? 'at-max' : ''}">${this.count}</h4>
   <div class="buttons">
  <button @click="${this.minus}" >-</button> <button @click="${this.add}">+</button>
   </div>
