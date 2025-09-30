@@ -105,7 +105,7 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         text-shadow: 0 0 var(--glow-blur) var(--glow-color);
       }
       .twentyone {
-        color: limegreen;
+        color: ghostwhite;
         --glow-color: rgba(150, 0, 255, 0.9);
         --glow-blur: 10px;
         --glow-spread: 2px;
