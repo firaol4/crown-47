@@ -67,13 +67,13 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         font-family: var(--ddd-font-navigation);
       }
       .wrapper {
-        margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
-        background-color: green;
+        background: white;
         padding: 2em;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px lightblue;
         text-align: center;
+        max-width: 300px;
+        width: 100%;
       }
       h3 span {
         font-size: var(--crown-47-label-font-size, var(--ddd-font-size-s));
