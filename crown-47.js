@@ -49,10 +49,13 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
       if (super.updated) {
         super.updated(changedProperties);
       }
-      if (changedProperties.has('counter')) {
-        // do your testing of the value and make it rain by calling makeItRain
+
+      if (changedProperties.has('count')) {
+        if (this.count === 21) {
+          this.makeItRain();
       }
     }
+  }
     
     makeItRain() {
       // this is called a dynamic import. It means it won't import the code for confetti until this method is called
