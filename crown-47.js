@@ -21,28 +21,10 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.title = "Counter App";
-    this.t = this.t || {};
-    this.t = {
-      ...this.t,
-      title: "Title",
-    };
-    this.count = 0;
-    increment() {
-      if (this.count < this.max) {
-        this.counter++;
-      }
-    };
-    
-    decrement() {
-      if (this.count > this.min) {
-        this.counter--;
-      }
-    };
-    
     this.min = 0;
     this.max = 50;
+    this.count = 0;
     
-
     this.registerLocalization({
       context: this,
       localesPath:
@@ -51,7 +33,18 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
       locales: ["ar", "es", "hi", "zh"],
     });
   }
+  
+  increment() {
+        if (this.count < this.max) {
+          this.counter++;
+        }
+      }
 
+  decrement() {
+      if (this.count > this.min) {
+        this.counter--;
+      }
+    }
   // Lit reactive properties
   static get properties() {
     return {
