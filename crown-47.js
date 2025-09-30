@@ -50,6 +50,9 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String },
+      count: { type: Number },
+      min: { type: Number },
+      max: { type: Number }
     };
   }
 
@@ -66,6 +69,11 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
       .wrapper {
         margin: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-4);
+        background-color: green;
+        padding: 2em;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
       }
       h3 span {
         font-size: var(--crown-47-label-font-size, var(--ddd-font-size-s));
