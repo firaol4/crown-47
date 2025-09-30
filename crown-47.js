@@ -98,14 +98,14 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-theme-text);
       }
       .eighteen {
-        color: lightblue;
+        color: lightgoldenrodyellow;
         --glow-color: rgba(0, 0, 255, 0.9);
         --glow-blur: 10px;
         --glow-spread: 2px;
         text-shadow: 0 0 var(--glow-blur) var(--glow-color);
       }
       .twentyone {
-        color: white;
+        color: limegreen;
         --glow-color: rgba(150, 0, 255, 0.9);
         --glow-blur: 10px;
         --glow-spread: 2px;
