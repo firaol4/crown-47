@@ -34,15 +34,15 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
     });
   }
   
-  increment() {
+  add() {
         if (this.count < this.max) {
-          this.counter++;
+          this.count++;
         }
       }
 
-  decrement() {
+  minus() {
       if (this.count > this.min) {
-        this.counter--;
+        this.count--;
       }
     }
   // Lit reactive properties
@@ -78,6 +78,11 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
       h3 span {
         font-size: var(--crown-47-label-font-size, var(--ddd-font-size-s));
       }
+      .buttons {
+          display: flex;
+          justify-content: center;
+          gap: 1em;
+        }
     `];
   }
 
@@ -88,7 +93,7 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
   <h3>${this.title}</h3>
   <h4>${this.count}</h4>
   <div class="buttons">
- <button @click="${this.minus}">-</button> <button @click="${this.add}">+</button>
+ <button @click="${this.minus}" >-</button> <button @click="${this.add}">+</button>
   </div>
   
   <slot></slot>
