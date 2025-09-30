@@ -98,13 +98,16 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-theme-text);
       }
       .eighteen {
-        color: var(--ddd-theme-warning, orange);
-        --glow-color: #00f; /* Blue glow */
-        --glow-blur: 10px;
-        --glow-spread: 5px;
+        background-color: #0247ae;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 var(--glow-blur) var(--glow-spread) var(--glow-color);
       }
       .twentyone {
-        color: var(--ddd-theme-danger, red);
+        background-color: #9400c6;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 var(--glow-blur) var(--glow-spread) var(--glow-color);
       }
 
     `];
