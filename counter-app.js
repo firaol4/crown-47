@@ -36,15 +36,11 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
   }
   
   add() {
-        if (this.count < this.max) {
-          this.count++;
-        }
+        this.count++;
       }
 
   minus() {
-      if (this.count > this.min) {
-        this.count--;
-      }
+      this.count--;
     }
   reset() {
     this.count = 0;
@@ -178,7 +174,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
   <h3>${this.title}</h3>
   <h4 class="number">${this.count}</h4>
   <div class="buttons">
- <button @click="${this.minus}" >-</button><button @click="${this.reset}">Reset</button> <button @click="${this.add}">+</button>
+ <button @click="${this.minus}" ?disabled="${this.min === this.counter}">-</button><button @click="${this.reset}">Reset</button> <button @click="${this.add}" ?disabled="${this.min === this.counter}">+</button>
   </div>
   
   <slot></slot>
