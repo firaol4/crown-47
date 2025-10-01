@@ -135,13 +135,14 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
         transition: color 0.3s ease;
         color: var(--ddd-theme-text);
       }
-      .title {
+      .wrapper .title {
         color: var(--ddd-theme-default-alertUrgent);
-        text-shadow: 0 0 8px var(--ddd-theme-default-alertUrgent),
-                    0 0 12px var(--ddd-theme-default-alertUrgent),
-                    0 0 20px var(--ddd-theme-default-alertUrgent);
+        font-weight: var(--ddd-font-weight-bold);
+        font-size: var(--ddd-font-size-l);
+        text-shadow: 
+          0 0 8px var(--ddd-theme-default-alertUrgent),
+          0 0 16px var(--ddd-theme-default-globalNeon);
       }
-
       :host([count="18"]) .number {
         color: var(--ddd-theme-default-alertUrgent);
         --glow-color: rgba(0, 0, 255, 0.9);
