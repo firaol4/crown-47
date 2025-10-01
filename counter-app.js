@@ -138,10 +138,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
       .wrapper .title {
         color: var(--ddd-theme-default-alertUrgent);
         font-weight: var(--ddd-font-weight-bold);
-        font-size: var(--ddd-font-size-l);
-        text-shadow: 
-          0 0 8px var(--ddd-theme-default-alertUrgent),
-          0 0 16px var(--ddd-theme-default-globalNeon);
+        text-shadow: 0 0 8px var(--ddd-theme-default-warning);
       }
       :host([count="18"]) .number {
         color: var(--ddd-theme-default-alertUrgent);
