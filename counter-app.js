@@ -121,7 +121,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
         justify-content: center;
         gap: 1em;
         }
-        button:hover, button:focus {
+      button:hover, button:focus {
         background: #0055aa;
         background: var(--ddd-theme-default-gradient-buttons);
 
@@ -136,8 +136,8 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
         transition: color 0.3s ease;
         color: var(--ddd-theme-text);
       }
-      h3 {
-        color: var(--ddd-theme-default-alertUrgent); 
+      .title {
+        color: var(--ddd-theme-default-warning); 
         font-weight: var(--ddd-font-weight-bold);
         text-shadow: 0 0 8px var(--ddd-theme-default-alertUrgent);
       }
@@ -176,7 +176,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 <confetti-container id="confetti">
 <div class="wrapper">
-  <h3>${this.title}</h3>
+  <h3 class="title">${this.title}</h3>
   <h4 class="number">${this.count}</h4>
   <div class="buttons">
  <button @click="${this.minus}" ?disabled="${this.min === this.counter}">-</button><button @click="${this.reset}">Reset</button> <button @click="${this.add}" ?disabled="${this.min === this.counter}">+</button>
