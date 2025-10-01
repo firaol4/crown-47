@@ -107,7 +107,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
         background: white;
         padding: 2em;
         border-radius: var(--ddd-radius-md);
-        box-shadow: 0 4px 12px lightblue;
+        box-shadow: var(--ddd-boxShadow-sm);
         text-align: center;
         max-width: 300px;
         width: 100%;
@@ -156,7 +156,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       .at-min {
-        color: red;
+        color: var(--ddd-theme-default-original87Pink);
         font-weight: var(--ddd-font-weight-bold);
         text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
       }
