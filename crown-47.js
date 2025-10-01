@@ -7,15 +7,15 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
 /**
- * `crown-47`
+ * `counter-app`
  * 
  * @demo index.html
- * @element crown-47
+ * @element counter-app
  */
-export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
+export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
-    return "crown-47";
+    return "counter-app";
   }
 
   constructor() {
@@ -25,10 +25,11 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
     this.max = 50;
     this.count = 0;
     
+    
     this.registerLocalization({
       context: this,
       localesPath:
-        new URL("./locales/crown-47.ar.json", import.meta.url).href +
+        new URL("./locales/counter-app.ar.json", import.meta.url).href +
         "/../",
       locales: ["ar", "es", "hi", "zh"],
     });
@@ -45,6 +46,9 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         this.count--;
       }
     }
+  reset() {
+    this.count = 0;
+  }
     updated(changedProperties) {
       if (super.updated) {
         super.updated(changedProperties);
@@ -102,19 +106,19 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
       .wrapper {
         background: white;
         padding: 2em;
-        border-radius: 12px;
+        border-radius: var(--ddd-radius-md);
         box-shadow: 0 4px 12px lightblue;
         text-align: center;
         max-width: 300px;
         width: 100%;
-        color: navajowhite;
+        color: var(--ddd-theme-default-alertUrgent);
         box-sizing: border-box; 
         vertical-align: top;
         overflow: auto;
         height: 300px;
       }
       h3 span {
-        font-size: var(--crown-47-label-font-size, var(--ddd-font-size-s));
+        font-size: var(--counter-app-label-font-size, var(--ddd-font-size-s));
       }
       .buttons {
         display: flex;
@@ -137,14 +141,14 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-theme-text);
       }
       .eighteen {
-        color: lightgoldenrodyellow;
+        color: var(--ddd-theme-default-alertUrgent);
         --glow-color: rgba(0, 0, 255, 0.9);
         --glow-blur: 10px;
         --glow-spread: 2px;
         text-shadow: 0 0 var(--glow-blur) var(--glow-color);
       }
       .twentyone {
-        color: ghostwhite;
+        color: var(--ddd-theme-default-shrineLight);
         --glow-color: rgba(150, 0, 255, 0.9);
         --glow-blur: 10px;
         --glow-spread: 2px;
@@ -152,13 +156,13 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
       }
       .at-min {
         color: red;
-        font-weight: bold;
+        font-weight: var(--ddd-font-weight-bold);
         text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
       }
 
       .at-max {
-        color: yellow;
-        font-weight: bold;
+        color: var(--ddd-theme-default-globalNeon);
+        font-weight: var(--ddd-font-weight-bold);
         text-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
       }
 
@@ -174,7 +178,7 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
   <h4 class="number ${this.count === 18 ? 'eighteen' : this.count === 21 ? 'twentyone' 
   : this.count === this.min ? 'at-min' : this.count === this.max ? 'at-max' : ''}">${this.count}</h4>
   <div class="buttons">
- <button @click="${this.minus}" >-</button> <button @click="${this.add}">+</button>
+ <button @click="${this.minus}" >-</button><button @click="${this.reset}">Reset</button> <button @click="${this.add}">+</button>
   </div>
   
   <slot></slot>
@@ -191,4 +195,4 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(Crown47.tag, Crown47);
+globalThis.customElements.define(counterApp.tag, counterApp);
