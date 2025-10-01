@@ -136,7 +136,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
         transition: color 0.3s ease;
         color: var(--ddd-theme-text);
       }
-      .title {
+      h3.title {
         color: var(--ddd-theme-default-warning); 
         font-weight: var(--ddd-font-weight-bold);
         text-shadow: 0 0 8px var(--ddd-theme-default-alertUrgent);
