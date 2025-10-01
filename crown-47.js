@@ -123,6 +123,8 @@ export class Crown47 extends DDDSuper(I18NMixin(LitElement)) {
         }
         button:hover, button:focus {
         background: #0055aa;
+        background: var(--ddd-theme-default-gradient-buttons);
+
       }
       h4 {
         font-size: 4em;
