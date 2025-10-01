@@ -85,7 +85,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String },
-      count: { type: Number },
+      count: { type: Number, reflect: true },
       min: { type: Number },
       max: { type: Number }
     };
@@ -140,20 +140,21 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
         transition: color 0.3s ease;
         color: var(--ddd-theme-text);
       }
-      .eighteen {
+      :host([count="18"]) .number {
         color: var(--ddd-theme-default-alertUrgent);
         --glow-color: rgba(0, 0, 255, 0.9);
         --glow-blur: 10px;
         --glow-spread: 2px;
         text-shadow: 0 0 var(--glow-blur) var(--glow-color);
       }
-      .twentyone {
+      :host([count="21"]) .number {
         color: var(--ddd-theme-default-shrineLight);
         --glow-color: rgba(150, 0, 255, 0.9);
         --glow-blur: 10px;
         --glow-spread: 2px;
         text-shadow: 0 0 var(--glow-blur) var(--glow-color);
       }
+
       .at-min {
         color: red;
         font-weight: var(--ddd-font-weight-bold);
@@ -175,8 +176,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
 <confetti-container id="confetti">
 <div class="wrapper">
   <h3>${this.title}</h3>
-  <h4 class="number ${this.count === 18 ? 'eighteen' : this.count === 21 ? 'twentyone' 
-  : this.count === this.min ? 'at-min' : this.count === this.max ? 'at-max' : ''}">${this.count}</h4>
+  <h4 class="number">${this.count}</h4>
   <div class="buttons">
  <button @click="${this.minus}" >-</button><button @click="${this.reset}">Reset</button> <button @click="${this.add}">+</button>
   </div>
