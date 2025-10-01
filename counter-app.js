@@ -107,6 +107,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
         text-align: center;
         max-width: 300px;
         width: 100%;
+        color: var(--ddd-theme-default-alertUrgent);
         box-sizing: border-box; 
         vertical-align: top;
         overflow: auto;
@@ -138,7 +139,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
       .wrapper .title {
         color: var(--ddd-theme-default-alertUrgent);
         font-weight: var(--ddd-font-weight-bold);
-        text-shadow: 0 0 8px var(--ddd-theme-default-warning);
+        text-shadow: 0 0 8px var(--ddd-theme-default-alertUrgent);
       }
       :host([count="18"]) .number {
         color: var(--ddd-theme-default-alertUrgent);
