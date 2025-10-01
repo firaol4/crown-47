@@ -107,7 +107,6 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
         text-align: center;
         max-width: 300px;
         width: 100%;
-        color: var(--ddd-theme-default-alertUrgent);
         box-sizing: border-box; 
         vertical-align: top;
         overflow: auto;
