@@ -34,22 +34,27 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
       locales: ["ar", "es", "hi", "zh"],
     });
   }
-  
+  /* This add method just adds one too count*/
   add() {
         this.count++;
       }
-
+  /* This minus method just subtracts one too count*/
   minus() {
       this.count--;
     }
+  /* This reset method just resets count to 0*/
   reset() {
     this.count = 0;
   }
+      
+    /* This method checks if the component's property updates*/
+
     updated(changedProperties) {
       if (super.updated) {
         super.updated(changedProperties);
       }
-
+        
+      /* This checks if the property count changed and if it is 21 and activates make it rain if so*/
       if (changedProperties.has('count')) {
         if (this.count === 21) {
           this.makeItRain();
