@@ -98,14 +98,13 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
     css`
       :host {
         display: inline-block;
-        color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-accent);
+        color: light-dark(black, white);
+        background-color: light-dark(white,var(--ddd-theme-accent));
         font-family: var(--ddd-font-navigation);
         margin: 0.5em;
         vertical-align: top; 
       }
       .wrapper {
-        background: white;
         padding: 2em;
         border-radius: var(--ddd-radius-md);
         box-shadow: var(--ddd-boxShadow-sm);
