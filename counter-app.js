@@ -98,8 +98,8 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
     css`
       :host {
         display: inline-block;
-        color: light-dark(black, white);
-        background-color: light-dark(white,black);
+        color: light-dark(var(--ddd-theme-default-navy80), var(--ddd-font-inventOrange));
+        background-color: light-dark(var(--ddd-theme-default-roarGolden),var(--ddd-theme-default-coalyGray));
         font-family: var(--ddd-font-navigation);
         margin: 0.5em;
         vertical-align: top; 
@@ -141,18 +141,13 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-theme-text);
       }
       :host([count="18"]) .number {
-        color: var(--ddd-theme-default-alertUrgent);
-        --glow-color: rgba(0, 0, 255, 0.9);
-        --glow-blur: 10px;
-        --glow-spread: 2px;
-        text-shadow: 0 0 var(--glow-blur) var(--glow-color);
+        color: var(--ddd-theme-default-athertonViolet);
+        
       }
       :host([count="21"]) .number {
-        color: var(--ddd-theme-default-shrineLight);
-        --glow-color: rgba(150, 0, 255, 0.9);
-        --glow-blur: 10px;
-        --glow-spread: 2px;
-        text-shadow: 0 0 var(--glow-blur) var(--glow-color);
+        color: var(--ddd-theme-default-keystoneYellow);
+       
+       
       }
 
       .at-min {
