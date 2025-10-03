@@ -99,7 +99,7 @@ export class counterApp extends DDDSuper(I18NMixin(LitElement)) {
       :host {
         display: inline-block;
         color: light-dark(black, white);
-        background-color: light-dark(white,var(--ddd-theme-accent));
+        background-color: light-dark(white,black);
         font-family: var(--ddd-font-navigation);
         margin: 0.5em;
         vertical-align: top; 
